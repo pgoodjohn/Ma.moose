@@ -1,4 +1,13 @@
 /*
+ ___  _____     Ma.Moose musical gloves - Final Sketch.
+|    |_   _|    This sketch is supposed to be run on a Bare Conductive touchboard.
+|   _  | |      The project idea was of a glove that plays a sound everytime it touches something.
+|___|  | |
+      /_ /      Pietro Goodjohn Bongiovanni - June 2015
+*/
+
+/*
+Notes on the sd should be named as follow in order for this baseline code to run properly
 TRACK 000 = DO
 TRACK 001 = DO#
 TRACK 002 = RE
@@ -29,6 +38,8 @@ TRACK 011 = SI
 //it gets a value as soon as one pin (or one finger of the glove is pressed)
 int playtrack;
 
+//I tried making it work with some arrays but the TouchBoard wasn't too happy about it and refused to work
+//Had to go back to single variables, not the best thing, but it works.
 int track0;
 int track1;
 int track2;
@@ -189,7 +200,7 @@ void loop() {
     {
       if (MPR121.isNewTouch(0))
       {
-        //track=track5;
+
       }
       else if (MPR121.isNewTouch(2))
       {
@@ -204,20 +215,18 @@ void loop() {
         playtrack = track1;
       }
       player.stopTrack();
-      //track = track0;
       player.playTrack(playtrack);
-      //digitalWrite(13, HIGH);
       Serial.println(playtrack);
     }
     if (MPR121.isNewTouch(2))
     {
       if (MPR121.isNewTouch(1))
       {
-        //track=track5;
+
       }
       else if (MPR121.isNewTouch(0))
       {
-        //track=track6;
+
       }
       else if (MPR121.isNewTouch(3))
       {
@@ -228,7 +237,6 @@ void loop() {
         playtrack = track2;
       }
       player.stopTrack();
-      //track = track0;
       player.playTrack(playtrack);
       Serial.println(playtrack);
     }
@@ -236,22 +244,21 @@ void loop() {
     {
       if (MPR121.isNewTouch(1))
       {
-        //track=track5;
+
       }
       else if (MPR121.isNewTouch(2))
       {
-        //track=track6;
+
       }
       else if (MPR121.isNewTouch(0))
       {
-        //track=track7;
+
       }
       else
       {
         playtrack = track3;
       }
       player.stopTrack();
-      //track = track0;
       player.playTrack(playtrack);
       Serial.println(playtrack);
     }
