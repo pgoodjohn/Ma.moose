@@ -1,25 +1,27 @@
-Ma.Moose is a project born at Politecnico di Torino in 2015.
-It is a sub part of a bigger project called Arduino Disability Orchestra, which you can check out at this link: https://arduinodisabilityorchestra.wordpress.com/.
+# Ma.Moose Music Gloves
+> Arduino Sketch to be loaded onto a Bare Conductive Touchboard for Ma.Moose Music Gloves.
 
-The main goal of the project was to create musical instruments via Bare Conductive touchboards in order to give disable kids the possibility to form a true Orchestra.
-Ma.Moose, at the moment, is a glove which, when touches any kind of surface, reproduces a sound.
-The first prototype we made reproduced notes of a cello but, theoretically, it can reproduce any kind of sound.
+With this sketch loaded onto your Touchboard, it will be able to play a single notes every time one or more of the first four capacitive touch button are touched. It only uses the first four buttons because the sketch is studied for one glove with a touch sensor placed on four fingers.
+The sound it plays are samples which need to be saved onto the microSD card in the Touchboard, the files should be named from TRACK000.mp3 to TRACK011.mp3 and they can be, virtually, of every instrument you want.
+The sketch also reads the status of two potentiometers (in pin 0 and 1): the first potentiometer is used to decide the first note of the scale so that the rest of it can be built by the board, the second potentiometer is used to decide which kind of scale needs to be generated. This script is able to generate, for the moment, Major, Minor, Penthatonic Major and Penthatonic Minor scales.
+This sketch was built during the Arduino Disability Orchestra program organized during the Academic Year 2014/2015 by Politecnico di Torino.
 
-Our idea was to implement a second glove equipped with an accelerometer which would give the performer the ability to module the sound as he wanted.
-We ran into some memory problem when we started working on this part so we decide to leave it for later.
 
-Then the school year ended, everyone got home from university and I left for China.
-To my knowledge development of the gloves has ended or, at least, it is not going on but I plan to take back this project and try my best to complete it as soon as I go back to Politecnico and to Turin's Fablab.
+## Installation
 
-Meanwhile feel free to work on it and do whatever you want. If you ever need some more information or you want some more explanations don't esitate in contacting me via email or on Twitter.
+Open with the Arduino sketch editor and upload on your Bare Conductive Touchboard.
+You can follow this [link](http://www.bareconductive.com/make/setting-up-arduino-with-your-touch-board/) in order to setup your Arduino environment in order to work perfectly with the Touchboard.
 
-Farewell!
 
-Pietro Goodjohn Bongiovanni
+## Release History
 
-China - Shanghai Provence - Jiading - 4800 Caoan Road.
+* 1.0.1
+    * CHANGE: Update docs and code comments (module code remains unchanged)
 
-Email:
-bongiovanni.pietro.vc@gmail.com
-Twitter:
-@pietrogoodjohn
+## Meta
+
+Pietro Bongiovanni – [@pietrogoodjohn](https://twitter.com/pietrogoodjohn) – bongiovanni.pietro.vc@gmail.com
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
+
+[https://github.com/pgoodjohn](https://github.com/pgoodjohn)
